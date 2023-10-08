@@ -1,4 +1,4 @@
-package boc.hackathon.kumbaras.ui.theme
+package boc.hackathon.kubaras.ui.theme
 
 import android.app.Activity
 import android.os.Build

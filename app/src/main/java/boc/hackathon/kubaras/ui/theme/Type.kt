@@ -1,4 +1,4 @@
-package boc.hackathon.kumbaras.ui.theme
+package boc.hackathon.kubaras.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -7,7 +7,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import boc.hackathon.kumbaras.R
+import boc.hackathon.kubaras.R
 
 
 val nuintioFamily = FontFamily(
@@ -61,7 +61,7 @@ val Typography = Typography(
     labelMedium = TextStyle(
         fontFamily = nuintioFamily,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 14.sp,
+        fontSize = 16.sp,
         lineHeight = 20.sp,
     ),
     bodySmall = TextStyle(

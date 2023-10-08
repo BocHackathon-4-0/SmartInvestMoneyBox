@@ -1,4 +1,4 @@
-package boc.hackathon.kumbaras.ui.theme
+package boc.hackathon.kubaras.ui.theme
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

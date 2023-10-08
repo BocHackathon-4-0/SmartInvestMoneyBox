@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package boc.hackathon.kumbaras
+package boc.hackathon.kubaras.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -21,14 +21,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import boc.hackathon.kumbaras.ui.theme.AppTheme
-import boc.hackathon.kumbaras.ui.theme.Typography
+import boc.hackathon.kubaras.R
+import boc.hackathon.kubaras.ui.theme.AppTheme
+import boc.hackathon.kubaras.ui.theme.Typography
 
 
 @Composable
 internal fun MainScreen(
     onBannerClick: () -> Unit,
-    onNotBannerClick: () -> Unit
 ) {
     Scaffold(
         modifier = Modifier.background(Color(0xFFF0F0F0)),
@@ -79,18 +79,20 @@ internal fun MainScreen(
             Cards()
             QuickActions()
             MonitoringCards()
-            Banner()
+            Banner(onBannerClick)
         }
     }
-
 }
 
 @Composable
-private fun Banner() {
+private fun Banner(
+    onBannerClick: () -> Unit
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 24.dp)
+            .padding(top = 24.dp),
+        onClick = onBannerClick
     ) {
         Box(
             Modifier.fillMaxSize()
@@ -166,6 +168,7 @@ private fun MonitoringCard(
                 style = Typography.bodyLarge,
                 color = Color(0xA0262626)
             )
+            Spacer(Modifier.weight(1f))
             Text(
                 modifier = Modifier.padding(top = 32.dp),
                 text = title,
@@ -272,6 +275,7 @@ private fun PromoCard(
             horizontalAlignment = Alignment.Start,
         ) {
             Image(painter = icon, contentDescription = text)
+            Spacer(Modifier.weight(1f))
             Text(text = text, style = Typography.bodyLarge)
         }
         Spacer(Modifier.weight(1f))
@@ -282,6 +286,6 @@ private fun PromoCard(
 @Composable
 fun GreetingPreview() {
     AppTheme {
-        MainScreen({}, {})
+        MainScreen({})
     }
 }

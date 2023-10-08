@@ -2,16 +2,18 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    kotlin("plugin.serialization") version "1.8.10"
 }
 
+
 android {
-    namespace = "boc.hackathon.kumbaras"
-    compileSdk = 33
+    namespace = "boc.hackathon.kubaras"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "boc.hackathon.kumbaras"
+        applicationId = "boc.hackathon.kubaras"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -57,6 +59,11 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+    implementation(libs.navigation)
+    implementation(libs.vico.compose.m3)
+    implementation(libs.retrofit)
+    implementation(libs.serialization)
+    implementation(libs.retrofit.converter)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
